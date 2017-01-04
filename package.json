@@ -1,0 +1,27 @@
+{
+  "name": "angellist-comp-calc",
+  "version": "0.1.0",
+  "description": "Application that aggregates Angellist job data and calculates compensation packeges based on real job data",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tjbrez/angellist-comp-calc.git"
+  },
+  "keywords": [
+    "angellist",
+    "compensation",
+    "calculator",
+    "jobs",
+    "equity",
+    "salary"
+  ],
+  "author": "TJ Breslin <tj@tjbreslin.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tjbrez/angellist-comp-calc/issues"
+  },
+  "homepage": "https://github.com/tjbrez/angellist-comp-calc#readme"
+}
