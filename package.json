@@ -4,6 +4,7 @@
   "description": "Application that aggregates Angellist job data and calculates compensation packeges based on real job data",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
     "test": "test"
   },
   "repository": {
@@ -23,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/tjbrez/angellist-comp-calc/issues"
   },
-  "homepage": "https://github.com/tjbrez/angellist-comp-calc#readme"
+  "homepage": "https://github.com/tjbrez/angellist-comp-calc#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
 }
