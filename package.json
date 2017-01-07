@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "test": "test"
+    "test": "test",
+    "load-jobs": "node management/load_jobs.js"
   },
   "repository": {
     "type": "git",
