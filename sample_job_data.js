@@ -1,4 +1,4 @@
-{
+module.exports = {
   "jobs": [
     {
       "id": 140206,

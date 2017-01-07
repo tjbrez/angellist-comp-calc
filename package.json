@@ -1,7 +1,7 @@
 {
   "name": "angellist-comp-calc",
   "version": "0.1.0",
-  "description": "Application that aggregates Angellist job data and calculates compensation packeges based on real job data",
+  "description": "Application that aggregates Angellist job data and calculates compensation packages based on real job data",
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
