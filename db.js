@@ -11,11 +11,14 @@ const DB_PORT = process.env.DB_PORT;
 const DB_NAME = process.env.DB_NAME;
 
 var connectToDB = function() {
-  mongoose.connect('mongodb://'+DB_USER+':'+DB_PASS+'@'+DB_HOST+':'+DB_PORT+'/'+DB_NAME);
+  var conn = mongoose.connect('mongodb://'+DB_USER+':'+DB_PASS+'@'+DB_HOST+':'+DB_PORT+'/'+DB_NAME);
+  console.log('connected to db')
+  return conn;
 }
 
 var disconnectFromDB = function() {
-  mongoose.connection.close();
+  mongoose.connection.close()
+  console.log('disconnected from db')
 }
 
 module.exports = {
