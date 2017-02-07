@@ -1,5 +1,6 @@
 'use strict';
 require('dotenv').config();
+const locationTags = require('./locations.json');
 const request = require('request-promise');
 const db = require('../db');
 const Job = require('../models/job');
@@ -9,37 +10,6 @@ console.log('Loading jobs data...');
 
 // Connect to database
 db.connectToDB();
-
-var locationTags = [
-  {name: 'Amsterdam', tag_id: 1771},
-  {name: 'Atlanta', tag_id: 1616},
-  {name: 'Austin', tag_id: 1617},
-  {name: 'Berlin', tag_id: 1914},
-  {name: 'Boston', tag_id: 1620},
-  {name: 'Chicago', tag_id: 1626},
-  {name: 'Cleveland', tag_id: 1630},
-  {name: 'Dallas', tag_id: 1633},
-  {name: 'Denver', tag_id: 1635},
-  {name: 'Houston', tag_id: 1645},
-  {name: 'Jacksonville', tag_id: 2240},
-  {name: 'London', tag_id: 1695},
-  {name: 'Los Angeles', tag_id: 1653},
-  {name: 'New York', tag_id: 1664},
-  {name: 'Paris', tag_id: 1842},
-  {name: 'Philadelphia', tag_id: 1671},
-  {name: 'Phoenix', tag_id: 1672},
-  {name: 'San Antonio', tag_id: 1678},
-  {name: 'San Diego', tag_id: 1679},
-  {name: 'San Francisco', tag_id: 1692},
-  {name: 'San Jose', tag_id: 1693},
-  {name: 'São Paulo', tag_id: 8732},
-  {name: 'Seattle', tag_id: 1680},
-  {name: 'Singapore', tag_id: 1682},
-  {name: 'Sydney', tag_id: 2125},
-  {name: 'Toronto', tag_id: 1702},
-  {name: 'Vancouver', tag_id: 1698},
-  {name: 'Washington, DC', tag_id: 1691}
-]
 
 var pageCounts = {};
 
@@ -98,7 +68,7 @@ function parsePage(error, response, respBody, loc) {
     body = JSON.parse(respBody);
   }
   catch (e) {
-    console.log(respBody);
+    return console.log('json error on page');
   }
 
   if (!error && response.statusCode == 200) {
